@@ -18,8 +18,9 @@ print('min price:', min_price)
 print('max price:', max_price)
 
 print('sorted prices:')
-prices_sorted = sorted(zip(prices.values(), prices.keys()))
-for price, name in prices_sorted:
-    print('    ', name, price)
+#prices_sorted = sorted(zip(prices.values(), prices.keys()))
+prices_sorted = sorted(prices.items(), key=lambda x:x[1], reverse=False)
+for name, price in prices_sorted:
+    print('    ', price, name)
 
 
