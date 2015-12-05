@@ -21,3 +21,7 @@ p2 = { key:value for key,value in prices.items() if key in tech_names }
 
 print("All techs")
 pprint(p2)
+
+# Make a dictionary of all prices below 100
+p3 = { key:value for key, value in prices.items() if value < 100}
+print(p3)
